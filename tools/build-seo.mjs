@@ -87,7 +87,10 @@ const c = await loadContent();
 if (!c.languages) throw new Error('content.json: expected {languages, en, he}');
 const DEF = c.defaultLang || c.languages[0];
 const urlOf = (l) => SITE + (l === DEF ? '/' : '/' + l + '/');
-const verify = String(process.env.GOOGLE_SITE_VERIFICATION || '').trim();
+// Search Console code: Netlify env var, or the admin field (site.gsc in any language), or the code verified on 01.11.2026
+const VERIFIED = 'gOB2t1Hw_MrHIpl6-DvWI_T3t_qE8EmjLk2fQv_WbGs';
+const verify = String(process.env.GOOGLE_SITE_VERIFICATION || c.languages.map((l) => c[l].site && c[l].site.gsc).find((v) => v && String(v).trim()) || VERIFIED)
+  .trim().replace(/^.*content=["']([^"']+)["'].*$/s, '$1'); // a whole pasted <meta> tag works too
 const template = readFileSync(join(ROOT, 'index.html'), 'utf8');
 const LOCALE = { he: 'he_IL', en: 'en_US', ar: 'ar_AR' };
 
@@ -152,3 +155,16 @@ Disallow: /admin.html
 Sitemap: ${SITE}/sitemap.xml
 `);
 console.log(`[seo] ${SITE}: ${c.languages.map(urlOf).join(' ')} · sitemap.xml · robots.txt`);
+
+// IndexNow: on a production deploy, tell Bing, Yandex and other engines that the pages changed.
+// (Google does not use IndexNow; for Google the sitemap is found through robots.txt and Search Console.)
+const INDEXNOW_KEY = '441946cd9b0ef7ad3ae23a9da6e775d4';
+if (process.env.CONTEXT === 'production' || process.env.INDEXNOW_FORCE) {
+  try {
+    const r = await fetch('https://api.indexnow.org/indexnow', {
+      method: 'POST', headers: { 'content-type': 'application/json; charset=utf-8' }, signal: AbortSignal.timeout(8000),
+      body: JSON.stringify({ host: new URL(SITE).hostname, key: INDEXNOW_KEY, keyLocation: SITE + '/' + INDEXNOW_KEY + '.txt', urlList: c.languages.map(urlOf) }),
+    });
+    console.log('[seo] IndexNow:', r.status);
+  } catch (e) { console.log('[seo] IndexNow skipped:', e.message); }
+} else console.log('[seo] IndexNow: not a production deploy, skipped');
