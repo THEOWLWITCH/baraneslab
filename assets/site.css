@@ -12,7 +12,7 @@
   --accent-ink: #03122a;
   --radius: 16px;
   --shadow: 0 20px 50px -24px rgba(0, 0, 0, .8);
-  --serif: "Frank Ruhl Libre", Georgia, "Times New Roman", serif;
+  --serif: "Space Grotesk", "Heebo", system-ui, sans-serif; /* headings: Space Grotesk for Latin, Heebo for Hebrew */
   --sans: "Assistant", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   color-scheme: dark;
 }
@@ -83,7 +83,7 @@ img { max-width: 100%; display: block; }
 .credit { margin-top: 6px !important; font-size: 13.5px; opacity: .8; }
 .eyebrow { margin: 0 0 18px; color: var(--accent); font-size: 15px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
 [dir="rtl"] .eyebrow { letter-spacing: .04em; }
-.hero h1 { margin: 0; font: 500 clamp(42px, 7.5vw, 92px)/1.04 var(--serif); letter-spacing: -.01em; text-wrap: balance;
+.hero h1 { margin: 0; font: 500 clamp(42px, 7.5vw, 92px)/1.04 var(--serif); letter-spacing: -.025em; text-wrap: balance;
   background: linear-gradient(180deg, #ffffff 30%, #b9cdf0); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .tagline { margin: 26px auto 0; max-width: 680px; color: var(--muted); font-size: clamp(18px, 2vw, 22px); font-weight: 300; text-wrap: balance; }
 .ctas { margin-top: 38px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
@@ -101,7 +101,7 @@ main { position: relative; }
 .sec + .sec { border-top: 1px solid var(--line); }
 .sec-head { display: flex; align-items: baseline; gap: 18px; margin-bottom: 36px; }
 .sec-head .num { font: 500 15px/1 var(--sans); color: var(--accent); letter-spacing: .1em; }
-.sec h2 { margin: 0; font: 500 clamp(32px, 4.4vw, 50px)/1.1 var(--serif); }
+.sec h2 { margin: 0; font: 500 clamp(32px, 4.4vw, 50px)/1.1 var(--serif); letter-spacing: -.015em; }
 .sec-head::after { content: ""; flex: 1; height: 1px; background: linear-gradient(to var(--end, right), var(--line2), transparent); align-self: center; }
 [dir="rtl"] .sec-head::after { --end: left; }
 .intro { color: var(--muted); max-width: 760px; margin: -12px 0 34px; font-size: 19px; }

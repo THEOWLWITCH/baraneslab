@@ -9,7 +9,7 @@
 body { margin: 0; background: var(--bg); color: var(--text); font: 400 16px/1.6 "Assistant", system-ui, sans-serif; }
 [hidden] { display: none !important; }
 a { color: var(--accent); }
-h1, h2, h3 { font-family: "Frank Ruhl Libre", Georgia, serif; font-weight: 500; }
+h1, h2, h3 { font-family: "Space Grotesk", "Heebo", system-ui, sans-serif; font-weight: 500; }
 .b { display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; border-radius: 999px; border: 1px solid var(--line2); background: transparent; color: var(--text); font: 600 15px/1.2 inherit; font-family: inherit; cursor: pointer; text-decoration: none; transition: border-color .2s, background .2s; }
 .b:hover { border-color: var(--accent); }
 .b.primary { background: var(--accent); color: var(--ink); border-color: var(--accent); }
