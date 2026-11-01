@@ -23,7 +23,8 @@
     var ls = langs(c); if (!ls.length) return '';
     var q = (location.search.match(/[?&]lang=(\w+)/) || [])[1];
     var saved = ''; try { saved = localStorage.getItem('bl.lang') || ''; } catch (e) { /* ignore */ }
-    return [q, saved, c.defaultLang, ls[0]].filter(function (l) { return l && ls.indexOf(l) >= 0; })[0];
+    var path = (location.pathname.match(/^\/([a-z]{2})(\/|$)/) || [])[1]; // /he/ = Hebrew page
+    return [path, q, path ? '' : saved, c.defaultLang, ls[0]].filter(function (l) { return l && ls.indexOf(l) >= 0; })[0];
   }
   function load() {
     if (PREVIEW) {
@@ -131,6 +132,8 @@
     document.documentElement.dir = B.isRtl(lang) ? 'rtl' : 'ltr';
     if (/^#[0-9a-f]{3,8}$/i.test(site.accent || '')) document.documentElement.style.setProperty('--accent', site.accent);
     document.title = [site.title, site.subtitle].filter(Boolean).join(' · ');
+    var can = $('link[rel=canonical]');
+    if (can && all.languages) can.setAttribute('href', can.href.replace(/\/([a-z]{2}\/)?$/, '/') + (lang === all.defaultLang ? '' : lang + '/'));
     var md = $('meta[name=description]'); if (md && site.seoDescription) md.setAttribute('content', site.seoDescription);
 
     $('#brandName').textContent = site.name || site.title || '';
@@ -168,7 +171,12 @@
     if (ls.length > 1) {
       var other = ls[(ls.indexOf(lang) + 1) % ls.length];
       lb.textContent = LANG_NAME[other] || other; lb.lang = other; lb.hidden = false;
-      lb.onclick = function (e) { e.preventDefault(); try { localStorage.setItem('bl.lang', other); } catch (x) { /* ignore */ } var y = scrollY; render(ALL, other); scrollTo(0, y); };
+      lb.setAttribute('href', other === all.defaultLang ? '/' : '/' + other + '/');
+      lb.onclick = function (e) {
+        e.preventDefault(); try { localStorage.setItem('bl.lang', other); } catch (x) { /* ignore */ }
+        if (!PREVIEW && /^(\/|\/index\.html|\/[a-z]{2}\/)$/.test(location.pathname)) history.replaceState(null, '', lb.getAttribute('href'));
+        var y = scrollY; render(ALL, other); scrollTo(0, y);
+      };
     } else lb.hidden = true;
 
     var secs = visibleSections(c);

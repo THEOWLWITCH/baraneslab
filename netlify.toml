@@ -1,7 +1,7 @@
 # Network Architecture & Information Lab · Prof. Danny Baranes
 [build]
   publish = "."
-  command = "npm install --omit=dev --no-audit --no-fund"
+  command = "npm install --omit=dev --no-audit --no-fund && node tools/build-seo.mjs"
 
 [functions]
   directory = "netlify/functions"
@@ -31,7 +31,17 @@
   status = 404
   force = true
 [[redirects]]
+  from = "/tools/*"
+  to = "/404.html"
+  status = 404
+  force = true
+[[redirects]]
   from = "/tests/*"
   to = "/404.html"
   status = 404
   force = true
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"

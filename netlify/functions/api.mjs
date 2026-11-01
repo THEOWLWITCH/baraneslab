@@ -18,7 +18,13 @@ export default async (req, context) => {
   const env = { ADMIN_PASSWORD: process.env.ADMIN_PASSWORD, SESSION_SECRET: process.env.SESSION_SECRET };
   const ip = (context && context.ip) || req.headers.get('x-nf-client-connection-ip') || '';
   try {
-    return await handle(req, store, env, ip);
+    const res = await handle(req, store, env, ip);
+    // After publishing from the admin page, rebuild the site so the pages Google reads (and sitemap) match.
+    const hook = process.env.BUILD_HOOK_URL;
+    if (hook && req.method === 'PUT' && new URL(req.url).pathname === '/api/content' && res.status === 200) {
+      try { await fetch(hook, { method: 'POST', signal: AbortSignal.timeout(4000) }); } catch (e) { console.error('build hook', e.message); }
+    }
+    return res;
   } catch (e) {
     console.error(e);
     return new Response(JSON.stringify({ error: 'server error' }), { status: 500, headers: { 'content-type': 'application/json' } });

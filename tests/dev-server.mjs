@@ -19,7 +19,7 @@ http.createServer(async (rq, rs) => {
     const r = await handle(new Request(url, { method: rq.method, headers: rq.headers, body }), store, env, rq.socket.remoteAddress);
     rs.writeHead(r.status, Object.fromEntries(r.headers)); rs.end(Buffer.from(await r.arrayBuffer())); return;
   }
-  const p = normalize(join(ROOT, url.pathname === '/' ? 'index.html' : decodeURIComponent(url.pathname)));
+  const p = normalize(join(ROOT, url.pathname.endsWith('/') ? url.pathname + 'index.html' : decodeURIComponent(url.pathname)));
   if (!p.startsWith(ROOT)) { rs.writeHead(403); rs.end(); return; }
   try { const d = await readFile(p); rs.writeHead(200, { 'content-type': TYPES[extname(p)] || 'application/octet-stream' }); rs.end(d); }
   catch { rs.writeHead(404, { 'content-type': 'text/html' }); rs.end('not found'); }

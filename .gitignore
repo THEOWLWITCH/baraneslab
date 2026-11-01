@@ -1,2 +1,6 @@
 node_modules/
 .netlify/
+# generated on Netlify by tools/build-seo.mjs
+/he/
+/sitemap.xml
+/robots.txt

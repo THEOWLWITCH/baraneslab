@@ -49,3 +49,18 @@ npm test
 - `assets/common.js`: עיצוב טקסט (פסקאות, תבליטים, **מודגש**, קישורים) וקישורים בטוחים.
 - `content.json`: התוכן ההתחלתי.
 - `netlify/functions/api.mjs` ו-`netlify/lib/core.mjs`: השרת (`/api/content`, `/api/login`, `/api/history`, `/api/img`).
+
+## חיפוש בגוגל
+
+בכל פריסה ב-Netlify הסקריפט `tools/build-seo.mjs` כותב את התוכן לתוך הדפים עצמם, כך שאפשר לקרוא אותם גם בלי JavaScript:
+- **שני דפים:** אנגלית בכתובת `/` ועברית בכתובת `/he/`, עם `hreflang` ו-`canonical` לכל אחד.
+- **תוכן מוכן:** הכותרות, הטקסטים, הצוות והפרסומים כתובים ישר בדף.
+- **מידע מובנה (schema.org):** המעבדה, פרופ׳ ברנס ו-19 הפרסומים.
+- **שיתוף:** תמונה ותיאור לוואטסאפ ולרשתות (`assets/og.jpg`).
+- **קבצים לגוגל:** `sitemap.xml` ו-`robots.txt` (מסך הניהול חסום לגוגל).
+
+התוכן נלקח ממה שפורסם במסך הניהול, ואם הוא לא זמין בבנייה, מ-`content.json`.
+
+**הגדרות ב-Netlify (Environment variables), שתיהן רשות:**
+- `GOOGLE_SITE_VERIFICATION`: הקוד מ-Google Search Console, לאימות האתר.
+- `BUILD_HOOK_URL`: כתובת Build hook (Site configuration › Build & deploy › Build hooks). אחרי כל פרסום מהניהול האתר נבנה מחדש, והדפים שגוגל קורא מתעדכנים.
