@@ -4,7 +4,7 @@
   var B = window.BL, esc = B.esc;
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
-  var TOKEN_KEY = 'bl.token', DRAFT_KEY = 'bl.draft', PREVIEW_KEY = 'bl.preview';
+  var TOKEN_KEY = 'bl.token', DRAFT_KEY = 'bl.draft.v2', PREVIEW_KEY = 'bl.preview';
 
   var C = null;            // all content: {languages, defaultLang, en:{site,sections}, he:{...}}
   var D = null;            // the language being edited (C[LANG])
@@ -238,7 +238,7 @@
     }
     var danger = '<div class="box danger-zone"><h3>פעולות על החלק</h3><div class="row" style="display:flex;gap:8px;flex-wrap:wrap">' +
       '<button class="b sm" type="button" data-dup-sec="' + i + '">שכפול החלק</button>' +
-      C.languages.filter(function (l) { return l !== LANG; }).map(function (l) { return '<button class="b sm" type="button" data-copy-sec="' + i + '" data-to="' + esc(l) + '">העתקה ל' + esc(LANG_NAME[l] || l) + '</button>'; }).join('') +
+      C.languages.filter(function (l) { return l !== LANG; }).map(function (l) { return '<button class="b sm" type="button" data-copy-sec="' + i + '" data-to="' + esc(l) + '">העתקת החלק ללשונית ' + esc(LANG_NAME[l] || l) + ' (בלי תרגום)</button>'; }).join('') +
       '<button class="b sm danger" type="button" data-del-sec="' + i + '">מחיקת החלק</button></div></div>';
     return head + groups + basics + own + list + danger;
   }
@@ -381,10 +381,10 @@
     if (b.hasAttribute('data-copy-sec')) {
       var ci = a('data-copy-sec')[0], to = b.getAttribute('data-to'), src = clone(D.sections[ci]), dst = C[to].sections;
       var at = dst.findIndex(function (x) { return x.id === src.id; });
-      if (at >= 0) {
-        if (!confirm('ב' + (LANG_NAME[to] || to) + ' כבר יש חלק עם אותו עוגן ("' + dst[at].title + '"). להחליף אותו בעותק של החלק הזה?')) return;
-        dst[at] = src;
-      } else dst.push(src);
+      var where = LANG_NAME[to] || to;
+      if (!confirm('ההעתקה מעבירה את החלק כמו שהוא, בשפה של הלשונית הזאת, ללשונית ' + where + '. הטקסט לא מתורגם.\n' +
+        (at >= 0 ? 'החלק "' + dst[at].title + '" בלשונית ' + where + ' יוחלף בעותק הזה.' : 'החלק יתווסף בסוף הלשונית ' + where + '.') + '\n\nלהמשיך?')) return;
+      if (at >= 0) dst[at] = src; else dst.push(src);
       changed(); toast('הועתק. עכשיו אפשר לתרגם אותו בלשונית ' + (LANG_NAME[to] || to) + '.'); return;
     }
     if (b.hasAttribute('data-import')) return importPubs(a('data-import')[0]);

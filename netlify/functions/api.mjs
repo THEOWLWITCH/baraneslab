@@ -1,5 +1,19 @@
 // Baranes Lab API: /api/* (content, login, history, images). Data lives in Netlify Blobs (store "baraneslab").
 import { handle } from '../lib/core.mjs';
+import { runOnce } from '../lib/migrate.mjs';
+
+let migrated = false;
+async function runMigration(store, req) {
+  if (migrated) return;
+  migrated = await runOnce(store, async () => {
+    const res = await fetch(new URL('/content.json', req.url), { signal: AbortSignal.timeout(5000) });
+    if (!res.ok) throw new Error('content.json ' + res.status);
+    return res.json();
+  }, async () => {
+    const hook = process.env.BUILD_HOOK_URL;
+    if (hook) try { await fetch(hook, { method: 'POST', signal: AbortSignal.timeout(4000) }); } catch (e) { /* the next deploy will do */ }
+  });
+}
 
 export default async (req, context) => {
   const { getStore } = await import('@netlify/blobs');
@@ -18,6 +32,7 @@ export default async (req, context) => {
   const env = { ADMIN_PASSWORD: process.env.ADMIN_PASSWORD, SESSION_SECRET: process.env.SESSION_SECRET };
   const ip = (context && context.ip) || req.headers.get('x-nf-client-connection-ip') || '';
   try {
+    try { await runMigration(store, req); } catch (e) { console.error('migration', e.message); }
     const res = await handle(req, store, env, ip);
     // After publishing from the admin page, rebuild the site so the pages Google reads (and sitemap) match.
     const hook = process.env.BUILD_HOOK_URL;
