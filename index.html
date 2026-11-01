@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Network Architecture &amp; Information Lab · Prof. Danny Baranes</title>
+<meta name="description" content="Network Architecture &amp; Information Lab, Prof. Danny Baranes, Ariel University.">
+<meta name="theme-color" content="#030816">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top" id="top">
+  <a class="brand" href="#"><img id="logo" alt="" hidden><span id="brandName">Baranes Lab</span></a>
+  <a class="lang-btn" id="langBtn" href="#" hidden></a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span><b class="vh" id="menuLabel">Menu</b></button>
+  <nav id="nav" class="nav"></nav>
+</header>
+
+<section class="hero" id="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="hero-img" id="heroImg"></div>
+  <div class="hero-grid">
+    <div class="hero-in">
+      <p class="eyebrow" id="eyebrow"></p>
+      <h1 id="title"></h1>
+      <p class="sub" id="subtitle"></p>
+      <p class="tagline" id="tagline"></p>
+      <a class="highlight" id="highlight" hidden></a>
+      <div class="ctas" id="ctas"></div>
+    </div>
+    <div class="hero-art" id="heroArt" aria-hidden="true"></div>
+  </div>
+  <a class="scroll" href="#main" aria-hidden="true" tabindex="-1"></a>
+</section>
+
+<main id="main"><p class="loading">Loading…</p></main>
+
+<footer class="foot">
+  <div><p id="footer"></p><p class="credit" id="credit"></p></div>
+  <a href="#top" id="toTop">Back to top ↑</a>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden><button id="lbClose" aria-label="Close">×</button><img alt=""><p></p></div>
+
+<script src="assets/common.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

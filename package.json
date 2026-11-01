@@ -1,0 +1,8 @@
+{
+  "name": "baraneslab-site",
+  "private": true,
+  "type": "module",
+  "description": "Personal lab website for Prof. Danny Baranes, with an admin editor (Netlify + Netlify Blobs)",
+  "scripts": { "test": "node --test tests/*.test.mjs" },
+  "dependencies": { "@netlify/blobs": "8.2.0" }
+}

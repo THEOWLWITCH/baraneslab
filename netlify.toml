@@ -1,0 +1,37 @@
+# Network Architecture & Information Lab · Prof. Danny Baranes
+[build]
+  publish = "."
+  command = "npm install --omit=dev --no-audit --no-fund"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/admin.html"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Robots-Tag = "noindex"
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin.html"
+  status = 301
+
+# קבצים פנימיים לא מוגשים
+[[redirects]]
+  from = "/netlify/*"
+  to = "/404.html"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/tests/*"
+  to = "/404.html"
+  status = 404
+  force = true

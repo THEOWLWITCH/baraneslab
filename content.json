@@ -1,0 +1,821 @@
+{
+  "languages": [
+    "en",
+    "he"
+  ],
+  "defaultLang": "en",
+  "en": {
+    "site": {
+      "heroImage": "assets/img/hero-bg.webp",
+      "hero1": "assets/img/hero-1.webp",
+      "hero2": "assets/img/hero-2.webp",
+      "hero3": "assets/img/hero-3.webp",
+      "hero4": "assets/img/hero-4.webp",
+      "heroVideo": "assets/img/hero-structure.mp4",
+      "accent": "#8fd3ff",
+      "logo": "",
+      "pubHighlight": "Baranes",
+      "lang": "en",
+      "name": "Baranes Lab",
+      "eyebrow": "Welcome to the",
+      "title": "Network Architecture & Information Lab",
+      "subtitle": "Prof. Danny Baranes · Ariel University",
+      "tagline": "We explore how neuronal network architecture shapes information, memory, and computation across biological and constructed systems.",
+      "highlight": "Remote and hybrid research positions (MSc, PhD, Postdoc)",
+      "highlightLink": "#join",
+      "ctaText": "Join the Lab",
+      "ctaLink": "#join",
+      "cta2Text": "Our projects",
+      "cta2Link": "#projects",
+      "footer": "© Baranes Lab · Ariel University",
+      "credit": "Website design and construction: Dr. Yael Sade · [yael.sade@gmail.com](mailto:yael.sade@gmail.com)",
+      "seoDescription": "Network Architecture & Information Lab, Prof. Danny Baranes, Ariel University. How neuronal network architecture shapes information, memory, and computation."
+    },
+    "sections": [
+      {
+        "id": "vision",
+        "type": "text",
+        "title": "Scientific Vision",
+        "nav": true,
+        "visible": true,
+        "image": "assets/img/vision.webp",
+        "imageAlt": "Illustration of a brain made of light and geometric shapes",
+        "bg": "",
+        "body": "We study neural networks from a **structural perspective**, asking how the geometry and spatial organization of a network shape activity, information processing, learning, and memory.\n\nResearch in the lab goes beyond a sole focus on synaptic communication, and examines how ordered structures at the level of the entire network act as organizing principles of neural function.\n\nBy integrating experimental neurobiology, physics, geometry, and computational modeling and simulations, we seek **general laws of functional structural organization** in networks.\n\nWe believe that these structural principles are essential for a deeper and broader understanding of neural networks and brain activity."
+      },
+      {
+        "id": "projects",
+        "type": "cards",
+        "title": "Projects",
+        "nav": true,
+        "visible": true,
+        "intro": "",
+        "bg": "assets/img/projects-bg.webp",
+        "items": [
+          {
+            "title": "Structured Wiring in Planar Biological Neural Networks",
+            "subtitle": "Machine learning-based geometrical analysis of network structure and function",
+            "text": "We study how structured wiring patterns in cultured planar neural networks give rise to ordered architectures that shape network function.\n\nUsing quantitative imaging, geometric analysis, computational modeling, and machine learning–based approaches, we investigate how network structure relates to network-level memory and robustness.",
+            "image": "assets/img/proj-wiring.webp",
+            "link": ""
+          },
+          {
+            "title": "Geometric Simulations of Structured Network Architectures",
+            "subtitle": "Linking structure and computation",
+            "text": "**Computational capabilities.** We develop geometric and physical simulations of networks to explore how structural rules give rise to robust, information-bearing architectures.\n\nThe project examines the emergence and stability of ordered structures and their relevance to computation in complex biological and artificial systems.",
+            "image": "assets/img/proj-geometric.webp",
+            "link": ""
+          },
+          {
+            "title": "Neuronal Networks and the Cosmic Web: An Architectural Comparison",
+            "subtitle": "Geometric analysis across scales",
+            "text": "In this project, we perform a comparative geometric analysis of cultured neuronal networks and images of the cosmic web, drawn from astronomical datasets and large-scale simulations. Using AI-based methods, we examine whether shared structural principles govern network organization across vastly different biological and cosmological scales.",
+            "image": "assets/img/proj-cosmic.webp",
+            "link": ""
+          },
+          {
+            "title": "Epistemological Physics and Neural Perception",
+            "subtitle": "",
+            "text": "This project examines how observation and neural perception shape the way physical laws are formulated and understood.\n\nUsing theoretical physics and thought experiments, we investigate the boundary between objective reality and reality as constrained by biological sensory systems, and the implications of perceptual limitations for fundamental physical laws.",
+            "image": "assets/img/proj-epistemology.webp",
+            "link": ""
+          },
+          {
+            "title": "Coral Skeleton–Derived Scaffolds for Repair of Brain Damage",
+            "subtitle": "",
+            "text": "In this project, coral skeleton–derived scaffolds are implanted into mice following traumatic brain injury. We observe structural tissue restoration and measurable behavioral recovery. The research focuses on uncovering the cellular and structural mechanisms that enable neural regeneration and functional rehabilitation following the implantation.",
+            "image": "assets/img/proj-coral.webp",
+            "link": ""
+          },
+          {
+            "title": "Calcite-Based Nanocomposites for Glioblastoma Therapy",
+            "subtitle": "",
+            "text": "This project investigates calcite-based composites as a toxic strategy against glioblastoma cells. Calcite particles are internalized by tumor cells, dissolve intracellularly, and elevate calcium levels, disrupting viability, proliferation, and migration. We aim to engineer optimized calcite constructs with enhanced anti-tumor activity while minimizing effects on healthy cells.",
+            "image": "assets/img/proj-calcite.webp",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "id": "team",
+        "type": "people",
+        "title": "Team",
+        "nav": true,
+        "visible": true,
+        "intro": "",
+        "bg": "assets/img/team-bg.webp",
+        "items": [
+          {
+            "name": "Professor Danny Baranes",
+            "role": "Principal Investigator",
+            "group": "",
+            "bio": "Associate Professor at Ariel University, Israel, with joint appointments in the Faculties of Natural Sciences and Medicine. His research spans translational and fundamental neuroscience, ranging from coral skeleton–based scaffolds for neural repair and glioblastoma therapy to the investigation of structure–function relationships in cultivated neuronal networks. He is a co-founder of LifeForce, a biotechnology company developing topical hemostatic technologies.",
+            "image": "assets/img/team-baranes.webp",
+            "email": "",
+            "link": "",
+            "lead": true
+          },
+          {
+            "name": "Dr. Orly Weiss",
+            "role": "Lab Manager",
+            "group": "",
+            "bio": "Trained in our lab, explores coral scaffold–mediated neural repair and the impact of calcite treatment on glioblastoma cells and cultivated neuronal networks.",
+            "image": "assets/img/team-weiss.webp",
+            "email": "",
+            "link": ""
+          },
+          {
+            "name": "Dr. Rony Hendler",
+            "role": "Research Associate",
+            "group": "",
+            "bio": "A medical student who completed her PhD in our lab and continues to collaborate on hemostasis and neural tissue regeneration research.",
+            "image": "assets/img/team-hendler.webp",
+            "email": "",
+            "link": ""
+          },
+          {
+            "name": "Wolfgang Kurz",
+            "role": "PhD student · TUM (Munich)",
+            "group": "",
+            "bio": "A PhD student at TUM (Munich) under joint supervision, studying geometric representations of cultured neuronal networks and developing stochastic simulation models.",
+            "image": "assets/img/team-kurz.webp",
+            "email": "",
+            "link": ""
+          },
+          {
+            "name": "Shreyasi Mitra",
+            "role": "PhD student",
+            "group": "",
+            "bio": "A PhD student investigating the effects of calcite on viability, motility, and proliferation of glioblastoma cells compared to normal astrocytes.",
+            "image": "assets/img/team-mitra.webp",
+            "email": "",
+            "link": ""
+          },
+          {
+            "name": "Yehonatan Greiner",
+            "role": "MSc student",
+            "group": "",
+            "bio": "An MSc student investigating novel wiring architectures in cultured neuronal networks and their geometric analysis.",
+            "image": "assets/img/team-greiner.webp",
+            "email": "",
+            "link": ""
+          },
+          {
+            "name": "Olcay Akgün",
+            "role": "MSc student · TUM (Munich)",
+            "group": "",
+            "bio": "An MSc student at TUM (Munich) under joint supervision, studying graphical representations and geometric analysis of cultured neuronal networks.",
+            "image": "assets/img/team-akgun.webp",
+            "email": "",
+            "link": ""
+          },
+          {
+            "name": "Gilad Lavi",
+            "role": "Project student",
+            "group": "",
+            "bio": "Project student conducting his research project, applying AI to investigate geometric structures in cultured neuronal networks.",
+            "image": "assets/img/team-lavi.webp",
+            "email": "",
+            "link": ""
+          },
+          {
+            "name": "Hila Goldman",
+            "role": "Project student",
+            "group": "",
+            "bio": "Project student exploring philosophical perspectives on whether the laws of nature are shaped by human perception.",
+            "image": "assets/img/team-goldman.webp",
+            "email": "",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "id": "publications",
+        "type": "publications",
+        "title": "Publications",
+        "nav": true,
+        "visible": true,
+        "intro": "* Corresponding author.",
+        "bg": "",
+        "items": [
+          {
+            "year": "2026",
+            "authors": "Baranes D.",
+            "title": "Nonlinear geometric control of synaptic organization in planar dendritic networks",
+            "venue": "Preprint · SSRN / ResearchGate",
+            "note": "",
+            "link": "https://doi.org/10.2139/ssrn.6172741"
+          },
+          {
+            "year": "2025",
+            "authors": "Kurz W. and Baranes D.",
+            "title": "AI-Assisted Geometric Analysis of Cultured Neuronal Networks: Parallels with the Cosmic Web",
+            "venue": "arXiv:2510.10286 [q-bio.NC]",
+            "note": "",
+            "link": "https://doi.org/10.48550/arXiv.2510.10286"
+          },
+          {
+            "year": "2025",
+            "authors": "Kurz W. et al.",
+            "title": "Dimensionality reduction in hyperspectral imaging using standard deviation-based band selection for efficient classification",
+            "venue": "Scientific Reports 15",
+            "note": "",
+            "link": "https://doi.org/10.1038/s41598-025-21738-4"
+          },
+          {
+            "year": "2025",
+            "authors": "Dahari I., Weiss E.V., Ayubi A., Baranes D. and Minnes R.",
+            "title": "A method for quantifying parallel growth between neuronal dendritic branches in vitro",
+            "venue": "PLoS One 20(10): e0335919",
+            "note": "",
+            "link": "https://doi.org/10.1371/journal.pone.0335919"
+          },
+          {
+            "year": "2021",
+            "authors": "Dahari I., Baranes D. and Minnes R.",
+            "title": "Automatic Identification of Dendritic Branches and their Orientation",
+            "venue": "Journal of Visualized Experiments, Sep 17;(175)",
+            "note": "IF 1.424 · JR 71/134 · Q2",
+            "link": "https://doi.org/10.3791/62679"
+          },
+          {
+            "year": "2020",
+            "authors": "Morad T., Hendler R.M., Canji E., Weiss O.E., Sion G., Minnes R., Grushchenko Polaq A.H., Merfeld I., Dubinsky Z., Nesher E. and Baranes D.*",
+            "title": "Aragonite-Polylysine: neuro-regenerative scaffolds with diverse effects on astrogliosis",
+            "venue": "Polymers (Basel)",
+            "note": "IF 4.967 · JR 16/90 · Q1 · Citations: 1",
+            "link": "https://doi.org/10.3390/polym12122850"
+          },
+          {
+            "year": "2020",
+            "authors": "Weiss O.E., Hendler R.M. and Baranes D.*",
+            "title": "Increasing Durability of Dissociated Neural Cell Cultures Using Biologically Active Coralline Matrix",
+            "venue": "Journal of Visualized Experiments, Jun 3;(160)",
+            "note": "IF 1.424 · JR 71/134 · Q2 · Citations: 1",
+            "link": "https://doi.org/10.3791/60443"
+          },
+          {
+            "year": "2018",
+            "authors": "Weiss O.E., Hendler R.M., Canji E.A., Morad T., Foox M., Francis Y., Dubinski Z., Merfeld I., Hammer L. and Baranes D.*",
+            "title": "Modulation of scar tissue formation in injured nervous tissue cultivated on surface-engineered coralline scaffolds",
+            "venue": "Journal of Biomedical Materials Research B: Applied Biomaterials, 106(6): 2295-2306",
+            "note": "IF 3.405 · JR 58/98 · Q2 · Citations: 7",
+            "link": "https://doi.org/10.1002/jbm.b.34037"
+          },
+          {
+            "year": "2013",
+            "authors": "Pinchas M. and Baranes D.*",
+            "title": "Dendritic branch intersections are structurally regulated targets for efficient axonal wiring and synaptic clustering",
+            "venue": "PLoS One 8(12)",
+            "note": "IF 3.502 · JR 29/73 · Q1 · Citations: 6",
+            "link": "https://doi.org/10.1371/journal.pone.0082083"
+          },
+          {
+            "year": "2009",
+            "authors": "Cove J., Blinder P. and Baranes D.*",
+            "title": "Contact among non-sister dendritic branches at bifurcations shape neighboring dendrites and pattern their synaptic inputs",
+            "venue": "Brain Research 1251: 30-41",
+            "note": "IF 3.61 · JR 155/274 · Q3 · Citations: 9",
+            "link": "https://doi.org/10.1016/j.brainres.2008.11.028"
+          },
+          {
+            "year": "2008",
+            "authors": "Blinder P., Cove J., Foox M. and Baranes D.*",
+            "title": "Convergence among non-sister dendritic branches: An activity-controlled mean to strengthen network connectivity",
+            "venue": "PLoS One 3(11): e3782",
+            "note": "IF 3.502 · JR 29/73 · Q2 · Citations: 7",
+            "link": "https://doi.org/10.1371/journal.pone.0003782"
+          },
+          {
+            "year": "2008",
+            "authors": "Peretz H., Blinder P., Segal L., Baranes D. and Vago R.",
+            "title": "Aragonite crystalline biomaterials as bioactive and instructive microenvironments for neural development",
+            "venue": "Journal of Tissue Engineering and Regenerative Medicine 2(8): 463-471",
+            "note": "IF 4.323 · JR 58/158 · Q2 · Citations: 11",
+            "link": "https://doi.org/10.1002/term.118"
+          },
+          {
+            "year": "2007",
+            "authors": "Peretz H., Talpalar A., Vago R. and Baranes D.*",
+            "title": "Superior Survival and Durability of Neurons and Astrocytes on 3-Dimensional Aragonite Biomatrices",
+            "venue": "Tissue Engineering 13(3): 461-472",
+            "note": "IF 3.508 · JR 44/161 · Q2 · Citations: 68",
+            "link": "https://doi.org/10.1089/ten.2005.0522"
+          },
+          {
+            "year": "2006",
+            "authors": "Sorkin R., Gabay T., Blinder P., Baranes D., Ben-Jacob E. and Hanein Y.",
+            "title": "Compact self-wiring in cultured neural networks",
+            "venue": "Journal of Neural Engineering 3(2): 95",
+            "note": "IF 5.043 · JR 32/98 · Q2 · Citations: 114",
+            "link": "https://doi.org/10.1088/1741-2560/3/2/003"
+          },
+          {
+            "year": "2006",
+            "authors": "Cove J., Blinder P., Abi-Jaoude E., Lafrenière-Roula M., Devroye L. and Baranes D.*",
+            "title": "Growth of neurites toward neurite-neurite contact sites increases synaptic clustering and secretion and is regulated by synaptic activity",
+            "venue": "Cerebral Cortex 16: 83-92",
+            "note": "IF 4.861 · JR 95/275 · Q2 · Citations: 20",
+            "link": "https://doi.org/10.1093/cercor/bhi086"
+          },
+          {
+            "year": "2005",
+            "authors": "Blinder P., Baruchi I., Volman V., Levine H., Baranes D. and Jacob E.",
+            "title": "Functional Topology Classification of Biological Computing Networks",
+            "venue": "Natural Computing 4: 339-361",
+            "note": "IF 1.504 · JR 117/144 · Q4 · Citations: 20",
+            "link": "https://doi.org/10.1007/s11047-005-3667-6"
+          },
+          {
+            "year": "1998",
+            "authors": "Baranes D., Lederfein D., Huang Y.-Y., Chen M., Bailey C.H. and Kandel E.R.",
+            "title": "Tissue Plasminogen Activator contributes to the late phase of long-term potentiation and to growth of new synaptic connections in the mossy fiber pathway",
+            "venue": "Neuron 21",
+            "note": "IF 18.688 · JR 8/274 · Q1 · Citations: 446",
+            "link": "https://doi.org/10.1016/s0896-6273(00)80597-8"
+          },
+          {
+            "year": "1996",
+            "authors": "Baranes D., Lopez-Garcia J.C., Chen M., Bailey C.H. and Kandel E.R.",
+            "title": "Reconstitution of the hippocampal mossy fiber pathway and associational-commissural pathways in a novel dissociated cell culture system",
+            "venue": "Proceedings of the National Academy of Sciences USA 93: 4706-4711",
+            "note": "IF 10.7 · JR 3/48 · Q1 · Citations: 53",
+            "link": "https://doi.org/10.1073/pnas.93.10.4706"
+          },
+          {
+            "year": "1996",
+            "authors": "Lopez-Garcia J.C., Arancio O., Kandel E.R. and Baranes D.*",
+            "title": "A presynaptic locus for long-term potentiation of elementary synaptic transmission at mossy fiber synapses in culture",
+            "venue": "Proceedings of the National Academy of Sciences USA 93: 4712-4717",
+            "note": "IF 10.7 · JR 3/48 · Q1 · Citations: 47",
+            "link": "https://doi.org/10.1073/pnas.93.10.4712"
+          }
+        ]
+      },
+      {
+        "id": "join",
+        "type": "text",
+        "title": "Join the Lab",
+        "navTitle": "Join the Lab",
+        "nav": true,
+        "visible": true,
+        "image": "assets/img/lab-1.webp",
+        "imageAlt": "A researcher in the lab",
+        "bg": "assets/img/join-bg.webp",
+        "body": "**Remote and hybrid research tracks available** (MSc, PhD, Postdoc), including extended off-site supervision.\n\n### What will you work on?\n\nDepending on background and interests, you will work on one or more of the following research directions:\n\n- Analysis of structural principles in biological neural networks using quantitative imaging, geometric analysis, and machine learning–based approaches\n- Development and exploration of geometric and physical simulations of networks, including studies of robustness, information storage, and computational properties\n- Theoretical and conceptual investigations at the interface of physics, perception, and observation\n\n### Who are we looking for?\n\nWe welcome applications from students with backgrounds in:\n\n- Neuroscience, Biology, Biophysics\n- Physics, Computer Science, Electrical Engineering, Mathematics\n- AI / Machine Learning, including students with experience in data analysis, modeling, or algorithmic approaches to complex systems\n\n### We value students who:\n\n- Enjoy working across experimental, computational, and theoretical approaches\n- Are comfortable thinking in geometric and structural terms\n- Can work independently while engaging in collaborative, interdisciplinary research\n\n### Why this matters?\n\nUnderstanding how structure constrains and enables function is a central challenge shared by neuroscience, physics, and artificial intelligence."
+      },
+      {
+        "id": "lab-life",
+        "type": "gallery",
+        "title": "Life in the Lab",
+        "nav": false,
+        "visible": true,
+        "intro": "",
+        "bg": "",
+        "items": [
+          {
+            "image": "assets/img/lab-2.webp",
+            "caption": ""
+          },
+          {
+            "image": "assets/img/lab-3.webp",
+            "caption": ""
+          },
+          {
+            "image": "assets/img/lab-4.webp",
+            "caption": ""
+          }
+        ]
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "title": "Contact",
+        "nav": true,
+        "visible": true,
+        "bg": "",
+        "name": "Professor Danny Baranes",
+        "body": "**Send a message including:** a cover letter, resume, and contact information for two references.",
+        "email": "dannyb@ariel.ac.il",
+        "phone": "+972-54-3231608",
+        "whatsapp": "+972543231608",
+        "address": "Ariel University, Ariel, Israel",
+        "mapUrl": "",
+        "showMap": false,
+        "items": [
+          {
+            "label": "Ariel University",
+            "url": "https://www.ariel.ac.il"
+          }
+        ]
+      }
+    ]
+  },
+  "he": {
+    "site": {
+      "heroImage": "assets/img/hero-bg.webp",
+      "hero1": "assets/img/hero-1.webp",
+      "hero2": "assets/img/hero-2.webp",
+      "hero3": "assets/img/hero-3.webp",
+      "hero4": "assets/img/hero-4.webp",
+      "heroVideo": "assets/img/hero-structure.mp4",
+      "accent": "#8fd3ff",
+      "logo": "",
+      "pubHighlight": "Baranes",
+      "lang": "he",
+      "name": "המעבדה של פרופ׳ דני ברנס",
+      "eyebrow": "ברוכים הבאים.ות",
+      "title": "המעבדה לארכיטקטורת רשת ומידע",
+      "subtitle": "פרופ׳ דני ברנס · אוניברסיטת אריאל",
+      "tagline": "אנו חוקרים כיצד הארכיטקטורה של רשתות נוירונים מעצבת מידע, זיכרון וחישוב במערכות ביולוגיות ובמערכות מעשה ידי אדם.",
+      "highlight": "אפשרויות מחקר מרחוק ובמתכונת היברידית (תואר שני, שלישי ופוסט־דוקטורט)",
+      "highlightLink": "#join",
+      "ctaText": "הצטרפו למעבדה",
+      "ctaLink": "#join",
+      "cta2Text": "הפרויקטים שלנו",
+      "cta2Link": "#projects",
+      "footer": "© המעבדה לארכיטקטורת רשת ומידע · אוניברסיטת אריאל",
+      "credit": "עיצוב ובניית האתר: ד\"ר יעל שדה · [yael.sade@gmail.com](mailto:yael.sade@gmail.com)",
+      "seoDescription": "המעבדה לארכיטקטורת רשת ומידע של פרופ׳ דני ברנס, אוניברסיטת אריאל."
+    },
+    "sections": [
+      {
+        "id": "vision",
+        "type": "text",
+        "title": "חזון מדעי",
+        "nav": true,
+        "visible": true,
+        "image": "assets/img/vision.webp",
+        "imageAlt": "איור של מוח עשוי אור וצורות גיאומטריות",
+        "bg": "",
+        "body": "אנו חוקרים רשתות עצביות מתוך **נקודת מבט מבנית**: כיצד הגיאומטריה והארגון המרחבי של הרשת מעצבים פעילות, עיבוד מידע, למידה וזיכרון.\n\nהמחקר במעבדה חורג מההתמקדות בתקשורת סינפטית בלבד, ובוחן כיצד מבנים מסודרים ברמת הרשת כולה פועלים כעקרונות מארגנים של תפקוד עצבי.\n\nבאמצעות שילוב של נוירוביולוגיה ניסויית, פיזיקה, גיאומטריה, מידול וסימולציות חישוביות, אנו מחפשים **חוקים כלליים של ארגון מבני פונקציונלי** של רשתות.\n\nאנו מאמינים שעקרונות אלה חיוניים להבנה עמוקה ורחבה יותר של רשתות עצביות ושל פעילות המוח."
+      },
+      {
+        "id": "projects",
+        "type": "cards",
+        "title": "פרויקטים",
+        "nav": true,
+        "visible": true,
+        "intro": "",
+        "bg": "assets/img/projects-bg.webp",
+        "items": [
+          {
+            "title": "דפוסי חיווט מבניים ברשתות עצביות ביולוגיות מישוריות",
+            "subtitle": "ניתוח גיאומטרי מבוסס למידת מכונה של מבנה הרשת ותפקודה",
+            "text": "אנו חוקרים כיצד דפוסי חיווט מובנים ברשתות עצביות פלנריות מתורבתות יוצרים מבנים סדורים, המעצבים את תפקוד הרשת.\n\nבאמצעות הדמיה כמותית, ניתוח גיאומטרי, מידול חישובי ושיטות מבוססות למידת מכונה, אנו בוחנים את הקשר בין מבנה הרשת לבין זיכרון וחוסן ברמת הרשת.",
+            "image": "assets/img/proj-wiring.webp",
+            "link": ""
+          },
+          {
+            "title": "סימולציות גיאומטריות של ארכיטקטורות רשת מאורגנות",
+            "subtitle": "בחינת הקשר בין מבנה לחישוביות",
+            "text": "פיתוח סימולציות גיאומטריות ופיזיקליות של רשתות במטרה לבחון כיצד חוקים מבניים מובילים להיווצרות ארכיטקטורות יציבות ונושאות מידע.\n\nהפרויקט חוקר את הופעתם ויציבותם של מבנים סדורים ואת הרלוונטיות שלהם לחישוב במערכות ביולוגיות ומלאכותיות מורכבות.",
+            "image": "assets/img/proj-geometric.webp",
+            "link": ""
+          },
+          {
+            "title": "רשתות עצביות והרשת הקוסמית: השוואה מבנית",
+            "subtitle": "ניתוח גיאומטרי בין סקאלות",
+            "text": "בפרויקט זה אנו מבצעים ניתוח גיאומטרי השוואתי של רשתות עצביות מתורבתות ושל תמונות של הרשת הקוסמית, מתוך מאגרי נתונים אסטרונומיים וסימולציות בקנה מידה גדול. באמצעות שיטות מבוססות בינה מלאכותית, אנו בוחנים האם עקרונות מבניים משותפים מכתיבים את ארגון הרשת בסקאלות ביולוגיות וקוסמולוגיות שונות מאוד זו מזו.",
+            "image": "assets/img/proj-cosmic.webp",
+            "link": ""
+          },
+          {
+            "title": "פיזיקה אפיסטמולוגית ותפיסה עצבית",
+            "subtitle": "",
+            "text": "הפרויקט בוחן כיצד תצפית ותפיסה עצבית מעצבות את הדרך שבה חוקי הפיזיקה מנוסחים ומובנים.\n\nבאמצעות פיזיקה תאורטית וניסויי מחשבה, אנו חוקרים את הגבול בין מציאות אובייקטיבית למציאות כפי שהיא מוגבלת על ידי מערכות חישה ביולוגיות, ואת ההשלכות של מגבלות תפיסתיות על חוקי הפיזיקה הבסיסיים.",
+            "image": "assets/img/proj-epistemology.webp",
+            "link": ""
+          },
+          {
+            "title": "פיגומים שמקורם בשלדי אלמוגים לתיקון נזק מוחי",
+            "subtitle": "",
+            "text": "בפרויקט זה, פיגומים שמקורם בשלדי אלמוגים מושתלים בעכברים לאחר פגיעת מוח טראומטית. אנו מבחינים בשיקום מבני של הרקמה ובהתאוששות התנהגותית ניתנת למדידה. המחקר מתמקד בחשיפת המנגנונים התאיים והמבניים שמאפשרים התחדשות עצבית ושיקום תפקודי בעקבות ההשתלה.",
+            "image": "assets/img/proj-coral.webp",
+            "link": ""
+          },
+          {
+            "title": "חומרים מרוכבים מבוססי קלציט לטיפול בגליובלסטומה",
+            "subtitle": "",
+            "text": "הפרויקט חוקר תרכובות מבוססות קלציט כאסטרטגיה רעילה נגד תאי גליובלסטומה. חלקיקי הקלציט נטמעים בתוך תאי הגידול, מתמוססים בתוכם ומעלים את רמות הסידן, וכך פוגעים בחיות התאים, בהתרבותם ובהגירתם. אנו שואפים להנדס מבני קלציט אופטימליים עם פעילות אנטי־גידולית משופרת, תוך מזעור ההשפעה על תאים בריאים.",
+            "image": "assets/img/proj-calcite.webp",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "id": "team",
+        "type": "people",
+        "title": "צוות המעבדה",
+        "navTitle": "סגל וסטודנטים",
+        "nav": true,
+        "visible": true,
+        "intro": "",
+        "bg": "assets/img/team-bg.webp",
+        "items": [
+          {
+            "name": "פרופסור דני ברנס",
+            "role": "ראש המעבדה",
+            "group": "",
+            "bio": "פרופסור חבר באוניברסיטת אריאל, ישראל, עם מינוי משותף בפקולטות למדעי הטבע ולרפואה. מחקרו משלב מדעי מוח יישומיים ובסיסיים, החל מפיתוח פיגומים מבוססי שלדי אלמוגים לשיקום רקמה עצבית ולטיפול בגליובלסטומה, ועד חקר יחסי מבנה–תפקוד ברשתות עצביות מתורבתות. הוא ממייסדי חברת LifeForce, חברת ביוטכנולוגיה המפתחת טכנולוגיות המוסטטיות לשימוש טופיקלי.",
+            "image": "assets/img/team-baranes.webp",
+            "email": "",
+            "link": "",
+            "lead": true
+          },
+          {
+            "name": "ד\"ר אורלי וייס",
+            "role": "מנהלת מעבדה",
+            "group": "",
+            "bio": "בוגרת המעבדה שלנו, חוקרת תיקון עצבי בתיווך שלד אלמוגים ואת השפעת טיפול הקלציט על תאי גליובלסטומה ורשתות עצביות מתורבתות.",
+            "image": "assets/img/team-weiss.webp",
+            "email": "",
+            "link": ""
+          },
+          {
+            "name": "ד\"ר רוני הנדלר",
+            "role": "עמיתת מחקר",
+            "group": "",
+            "bio": "סטודנטית לרפואה שסיימה את הדוקטורט שלה במעבדה שלנו וממשיכה לשתף פעולה במחקר על קרישת דם והתחדשות רקמות עצביות.",
+            "image": "assets/img/team-hendler.webp",
+            "email": "",
+            "link": ""
+          },
+          {
+            "name": "וולפגנג קורץ",
+            "role": "דוקטורנט · TUM (מינכן)",
+            "group": "",
+            "bio": "דוקטורנט ב-TUM (מינכן) בהנחיה משותפת, חוקר ייצוגים גיאומטריים של רשתות עצביות מתורבתות ומפתח מודלים של סימולציה סטוכסטית.",
+            "image": "assets/img/team-kurz.webp",
+            "email": "",
+            "link": ""
+          },
+          {
+            "name": "שרייאסי מיטרה",
+            "role": "דוקטורנטית",
+            "group": "",
+            "bio": "חוקרת את ההשפעות של קלציט על חיות, תנועתיות והתפשטות תאי גליובלסטומה בהשוואה לאסטרוציטים רגילים.",
+            "image": "assets/img/team-mitra.webp",
+            "email": "",
+            "link": ""
+          },
+          {
+            "name": "יהונתן גריינר",
+            "role": "סטודנט לתואר שני",
+            "group": "",
+            "bio": "סטודנט לתואר שני, חוקר ארכיטקטורות חיווט חדשניות ברשתות נוירונים מתורבתות והניתוח הגיאומטרי שלהן.",
+            "image": "assets/img/team-greiner.webp",
+            "email": "",
+            "link": ""
+          },
+          {
+            "name": "אולצ'אי אקגון",
+            "role": "סטודנט לתואר שני · TUM (מינכן)",
+            "group": "",
+            "bio": "סטודנט לתואר שני ב-TUM (מינכן) בהנחיה משותפת, לומד ייצוגים גרפיים וניתוח גיאומטרי של רשתות נוירונים מתורבתות.",
+            "image": "assets/img/team-akgun.webp",
+            "email": "",
+            "link": ""
+          },
+          {
+            "name": "גלעד לביא",
+            "role": "סטודנט לתואר ראשון",
+            "group": "",
+            "bio": "סטודנט לתואר ראשון במדעי המוח. המחקר שלו כולל יישום בינה מלאכותית לחקר מבנים גיאומטריים ברשתות נוירונים בתרבית.",
+            "image": "assets/img/team-lavi.webp",
+            "email": "",
+            "link": ""
+          },
+          {
+            "name": "הילה גולדמן",
+            "role": "סטודנטית לתואר ראשון",
+            "group": "",
+            "bio": "סטודנטית לתואר ראשון במדעי המוח. חוקרת פרספקטיבות פילוסופיות סביב השאלה האם חוקי הטבע מעוצבים על ידי התפיסה האנושית.",
+            "image": "assets/img/team-goldman.webp",
+            "email": "",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "id": "publications",
+        "type": "publications",
+        "title": "פרסומים",
+        "nav": true,
+        "visible": true,
+        "intro": "* מחבר מכותב.",
+        "bg": "",
+        "items": [
+          {
+            "year": "2026",
+            "authors": "Baranes D.",
+            "title": "Nonlinear geometric control of synaptic organization in planar dendritic networks",
+            "venue": "Preprint · SSRN / ResearchGate",
+            "note": "",
+            "link": "https://doi.org/10.2139/ssrn.6172741"
+          },
+          {
+            "year": "2025",
+            "authors": "Kurz W. and Baranes D.",
+            "title": "AI-Assisted Geometric Analysis of Cultured Neuronal Networks: Parallels with the Cosmic Web",
+            "venue": "arXiv:2510.10286 [q-bio.NC]",
+            "note": "",
+            "link": "https://doi.org/10.48550/arXiv.2510.10286"
+          },
+          {
+            "year": "2025",
+            "authors": "Kurz W. et al.",
+            "title": "Dimensionality reduction in hyperspectral imaging using standard deviation-based band selection for efficient classification",
+            "venue": "Scientific Reports 15",
+            "note": "",
+            "link": "https://doi.org/10.1038/s41598-025-21738-4"
+          },
+          {
+            "year": "2025",
+            "authors": "Dahari I., Weiss E.V., Ayubi A., Baranes D. and Minnes R.",
+            "title": "A method for quantifying parallel growth between neuronal dendritic branches in vitro",
+            "venue": "PLoS One 20(10): e0335919",
+            "note": "",
+            "link": "https://doi.org/10.1371/journal.pone.0335919"
+          },
+          {
+            "year": "2021",
+            "authors": "Dahari I., Baranes D. and Minnes R.",
+            "title": "Automatic Identification of Dendritic Branches and their Orientation",
+            "venue": "Journal of Visualized Experiments, Sep 17;(175)",
+            "note": "IF 1.424 · JR 71/134 · Q2",
+            "link": "https://doi.org/10.3791/62679"
+          },
+          {
+            "year": "2020",
+            "authors": "Morad T., Hendler R.M., Canji E., Weiss O.E., Sion G., Minnes R., Grushchenko Polaq A.H., Merfeld I., Dubinsky Z., Nesher E. and Baranes D.*",
+            "title": "Aragonite-Polylysine: neuro-regenerative scaffolds with diverse effects on astrogliosis",
+            "venue": "Polymers (Basel)",
+            "note": "IF 4.967 · JR 16/90 · Q1 · Citations: 1",
+            "link": "https://doi.org/10.3390/polym12122850"
+          },
+          {
+            "year": "2020",
+            "authors": "Weiss O.E., Hendler R.M. and Baranes D.*",
+            "title": "Increasing Durability of Dissociated Neural Cell Cultures Using Biologically Active Coralline Matrix",
+            "venue": "Journal of Visualized Experiments, Jun 3;(160)",
+            "note": "IF 1.424 · JR 71/134 · Q2 · Citations: 1",
+            "link": "https://doi.org/10.3791/60443"
+          },
+          {
+            "year": "2018",
+            "authors": "Weiss O.E., Hendler R.M., Canji E.A., Morad T., Foox M., Francis Y., Dubinski Z., Merfeld I., Hammer L. and Baranes D.*",
+            "title": "Modulation of scar tissue formation in injured nervous tissue cultivated on surface-engineered coralline scaffolds",
+            "venue": "Journal of Biomedical Materials Research B: Applied Biomaterials, 106(6): 2295-2306",
+            "note": "IF 3.405 · JR 58/98 · Q2 · Citations: 7",
+            "link": "https://doi.org/10.1002/jbm.b.34037"
+          },
+          {
+            "year": "2013",
+            "authors": "Pinchas M. and Baranes D.*",
+            "title": "Dendritic branch intersections are structurally regulated targets for efficient axonal wiring and synaptic clustering",
+            "venue": "PLoS One 8(12)",
+            "note": "IF 3.502 · JR 29/73 · Q1 · Citations: 6",
+            "link": "https://doi.org/10.1371/journal.pone.0082083"
+          },
+          {
+            "year": "2009",
+            "authors": "Cove J., Blinder P. and Baranes D.*",
+            "title": "Contact among non-sister dendritic branches at bifurcations shape neighboring dendrites and pattern their synaptic inputs",
+            "venue": "Brain Research 1251: 30-41",
+            "note": "IF 3.61 · JR 155/274 · Q3 · Citations: 9",
+            "link": "https://doi.org/10.1016/j.brainres.2008.11.028"
+          },
+          {
+            "year": "2008",
+            "authors": "Blinder P., Cove J., Foox M. and Baranes D.*",
+            "title": "Convergence among non-sister dendritic branches: An activity-controlled mean to strengthen network connectivity",
+            "venue": "PLoS One 3(11): e3782",
+            "note": "IF 3.502 · JR 29/73 · Q2 · Citations: 7",
+            "link": "https://doi.org/10.1371/journal.pone.0003782"
+          },
+          {
+            "year": "2008",
+            "authors": "Peretz H., Blinder P., Segal L., Baranes D. and Vago R.",
+            "title": "Aragonite crystalline biomaterials as bioactive and instructive microenvironments for neural development",
+            "venue": "Journal of Tissue Engineering and Regenerative Medicine 2(8): 463-471",
+            "note": "IF 4.323 · JR 58/158 · Q2 · Citations: 11",
+            "link": "https://doi.org/10.1002/term.118"
+          },
+          {
+            "year": "2007",
+            "authors": "Peretz H., Talpalar A., Vago R. and Baranes D.*",
+            "title": "Superior Survival and Durability of Neurons and Astrocytes on 3-Dimensional Aragonite Biomatrices",
+            "venue": "Tissue Engineering 13(3): 461-472",
+            "note": "IF 3.508 · JR 44/161 · Q2 · Citations: 68",
+            "link": "https://doi.org/10.1089/ten.2005.0522"
+          },
+          {
+            "year": "2006",
+            "authors": "Sorkin R., Gabay T., Blinder P., Baranes D., Ben-Jacob E. and Hanein Y.",
+            "title": "Compact self-wiring in cultured neural networks",
+            "venue": "Journal of Neural Engineering 3(2): 95",
+            "note": "IF 5.043 · JR 32/98 · Q2 · Citations: 114",
+            "link": "https://doi.org/10.1088/1741-2560/3/2/003"
+          },
+          {
+            "year": "2006",
+            "authors": "Cove J., Blinder P., Abi-Jaoude E., Lafrenière-Roula M., Devroye L. and Baranes D.*",
+            "title": "Growth of neurites toward neurite-neurite contact sites increases synaptic clustering and secretion and is regulated by synaptic activity",
+            "venue": "Cerebral Cortex 16: 83-92",
+            "note": "IF 4.861 · JR 95/275 · Q2 · Citations: 20",
+            "link": "https://doi.org/10.1093/cercor/bhi086"
+          },
+          {
+            "year": "2005",
+            "authors": "Blinder P., Baruchi I., Volman V., Levine H., Baranes D. and Jacob E.",
+            "title": "Functional Topology Classification of Biological Computing Networks",
+            "venue": "Natural Computing 4: 339-361",
+            "note": "IF 1.504 · JR 117/144 · Q4 · Citations: 20",
+            "link": "https://doi.org/10.1007/s11047-005-3667-6"
+          },
+          {
+            "year": "1998",
+            "authors": "Baranes D., Lederfein D., Huang Y.-Y., Chen M., Bailey C.H. and Kandel E.R.",
+            "title": "Tissue Plasminogen Activator contributes to the late phase of long-term potentiation and to growth of new synaptic connections in the mossy fiber pathway",
+            "venue": "Neuron 21",
+            "note": "IF 18.688 · JR 8/274 · Q1 · Citations: 446",
+            "link": "https://doi.org/10.1016/s0896-6273(00)80597-8"
+          },
+          {
+            "year": "1996",
+            "authors": "Baranes D., Lopez-Garcia J.C., Chen M., Bailey C.H. and Kandel E.R.",
+            "title": "Reconstitution of the hippocampal mossy fiber pathway and associational-commissural pathways in a novel dissociated cell culture system",
+            "venue": "Proceedings of the National Academy of Sciences USA 93: 4706-4711",
+            "note": "IF 10.7 · JR 3/48 · Q1 · Citations: 53",
+            "link": "https://doi.org/10.1073/pnas.93.10.4706"
+          },
+          {
+            "year": "1996",
+            "authors": "Lopez-Garcia J.C., Arancio O., Kandel E.R. and Baranes D.*",
+            "title": "A presynaptic locus for long-term potentiation of elementary synaptic transmission at mossy fiber synapses in culture",
+            "venue": "Proceedings of the National Academy of Sciences USA 93: 4712-4717",
+            "note": "IF 10.7 · JR 3/48 · Q1 · Citations: 47",
+            "link": "https://doi.org/10.1073/pnas.93.10.4712"
+          }
+        ]
+      },
+      {
+        "id": "join",
+        "type": "text",
+        "title": "הצטרפו למעבדה",
+        "nav": true,
+        "visible": true,
+        "image": "assets/img/lab-1.webp",
+        "imageAlt": "חוקר במעבדה",
+        "bg": "assets/img/join-bg.webp",
+        "body": "**מוזמנות ומוזמנים להגיש מועמדות לתואר שני, דוקטורט ופוסט־דוקטורט**, כולל מסלולי מחקר מרחוק ובמתכונת היברידית.\n\nסטודנטים וסטודנטיות עם מוטיבציה, המעוניינים להבין כיצד מבנה מוביל לאגירת מידע, חישוב ותפקוד ברשתות מורכבות.\n\n### על מה תעבוד/י?\n\nבהתאם לרקע ולתחומי העניין, תעבוד/י על אחד או יותר מכיווני המחקר הבאים:\n\n- ניתוח עקרונות מבניים ברשתות עצביות ביולוגיות באמצעות הדמיה כמותית, ניתוח גיאומטרי וגישות חישוביות מבוססות למידת מכונה\n- פיתוח וחקר סימולציות גיאומטריות ופיזיקליות של רשתות, כולל מחקר של חוסן, אגירת מידע ותכונות חישוביות\n- חקירות תאורטיות וקונספטואליות בממשק שבין פיזיקה, תפיסה ותצפית\n\n### את מי אנחנו מחפשים?\n\nנקבל בברכה מועמדויות מסטודנטים מרקעים של:\n\n- נוירוביולוגיה, ביולוגיה, ביופיזיקה\n- פיזיקה, מדעי המחשב, הנדסת חשמל, מתמטיקה\n- בינה מלאכותית / למידת מכונה, כולל סטודנטים בעלי ניסיון בניתוח נתונים, מידול או גישות אלגוריתמיות למערכות מורכבות\n\n### אנחנו מעריכים סטודנטים.יות ש:\n\n- נהנים מעבודה החוצה גבולות בין גישות ניסויית, חישובית ותאורטית\n- מרגישים בנוח לחשוב במונחים גיאומטריים ומבניים\n- מסוגלים לעבוד באופן עצמאי תוך השתלבות במחקר שיתופי ואינטרדיסציפלינרי"
+      },
+      {
+        "id": "lab-life",
+        "type": "gallery",
+        "title": "החיים במעבדה",
+        "nav": false,
+        "visible": true,
+        "intro": "",
+        "bg": "",
+        "items": [
+          {
+            "image": "assets/img/lab-2.webp",
+            "caption": ""
+          },
+          {
+            "image": "assets/img/lab-3.webp",
+            "caption": ""
+          },
+          {
+            "image": "assets/img/lab-4.webp",
+            "caption": ""
+          }
+        ]
+      },
+      {
+        "id": "contact",
+        "type": "contact",
+        "title": "יצירת קשר",
+        "nav": true,
+        "visible": true,
+        "bg": "",
+        "name": "פרופ׳ דני ברנס",
+        "body": "**שלחו דוא\"ל וצרפו:** מכתב מלווה, קורות חיים ופרטי קשר של שני ממליצים אפשריים.",
+        "email": "dannyb@ariel.ac.il",
+        "phone": "+972-54-3231608",
+        "whatsapp": "+972543231608",
+        "address": "אוניברסיטת אריאל, אריאל",
+        "mapUrl": "",
+        "showMap": false,
+        "items": [
+          {
+            "label": "אוניברסיטת אריאל",
+            "url": "https://www.ariel.ac.il"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ניהול האתר · Baranes Lab</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Frank+Ruhl+Libre:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/admin.css">
+</head>
+<body>
+<div id="login" class="login" hidden>
+  <form class="lbox" id="loginForm">
+    <img src="assets/favicon.svg" alt="" width="54" height="54">
+    <h1>ניהול האתר</h1>
+    <p class="sub">Baranes Lab</p>
+    <label for="pw">סיסמת הניהול</label>
+    <input id="pw" type="password" autocomplete="current-password" required>
+    <button class="b primary" type="submit">כניסה</button>
+    <p class="err" id="loginErr" role="alert"></p>
+  </form>
+</div>
+
+<div id="app" class="app" hidden>
+  <header class="bar">
+    <div class="ttl"><img src="assets/favicon.svg" alt="" width="28" height="28"><b>ניהול האתר</b><span id="status" class="status"></span></div>
+    <div class="langs" id="langTabs" role="tablist" aria-label="שפה"></div>
+    <div class="acts">
+      <a class="b" href="index.html" target="_blank" rel="noopener">האתר ↗</a>
+      <button class="b" id="previewBtn" type="button">תצוגה מקדימה</button>
+      <button class="b primary" id="saveBtn" type="button">שמירה ופרסום</button>
+      <button class="b ghost" id="logoutBtn" type="button">יציאה</button>
+    </div>
+  </header>
+  <div class="local" id="localNote" hidden>מצב מקומי: אין חיבור לשרת של Netlify, ולכן אי אפשר לפרסם מכאן. אפשר לערוך, לראות תצוגה מקדימה ולהוריד את התוכן כקובץ.</div>
+  <div class="cols">
+    <aside class="side">
+      <button class="nav-it" data-go="site" type="button">⚙️ הגדרות כלליות ופתיח</button>
+      <div class="side-t">החלקים באתר</div>
+      <div id="secList"></div>
+      <button class="b add" id="addSecBtn" type="button">＋ הוספת חלק</button>
+      <div class="side-t">כלים</div>
+      <button class="nav-it" data-go="history" type="button">🕘 גרסאות קודמות וגיבוי</button>
+      <button class="nav-it" data-go="help" type="button">❓ איך עורכים</button>
+    </aside>
+    <main class="panel" id="panel"></main>
+  </div>
+</div>
+
+<dialog id="dlg"><form method="dialog" id="dlgForm"></form></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/common.js"></script>
+<script src="assets/admin.js"></script>
+</body>
+</html>
