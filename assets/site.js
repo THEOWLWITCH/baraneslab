@@ -167,6 +167,11 @@
     } else lb.hidden = true;
 
     var secs = visibleSections(c);
+    // content saved before the redesign kept the video in site.heroVideo: show it in the first text section
+    if (safeUrl(site.heroVideo) && !secs.some(function (s) { return s.video; })) {
+      var firstText = secs.filter(function (s) { return s.type === 'text'; })[0];
+      if (firstText) firstText.video = site.heroVideo;
+    }
     $('#nav').innerHTML = secs.filter(function (s) { return s.nav !== false; }).map(function (s) {
       return '<a href="#' + esc(s.id) + '">' + esc(s.navTitle || s.title) + '</a>';
     }).join('');
