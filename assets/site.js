@@ -12,6 +12,11 @@
   var ALL = null, PUBHL = '';
   var LANG_NAME = { en: 'English', he: 'עברית', ar: 'العربية' };
 
+  // The page always opens at the top: no restored scroll position, and no jump to a #section left in the address.
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  scrollTo(0, 0);
+
   // Content may hold several languages: {languages:['en','he'], defaultLang, en:{site,sections}, he:{...}}
   function langs(c) { return c && Array.isArray(c.languages) ? c.languages.filter(function (l) { return c[l] && c[l].site; }) : []; }
   function pickLang(c) {
@@ -187,7 +192,6 @@
     secs.forEach(function (s) { if (s.type === 'publications') pubs(s); });
     wire();
     if (PREVIEW && !$('.preview-bar')) document.body.insertAdjacentHTML('beforeend', '<div class="preview-bar">תצוגה מקדימה · עוד לא נשמר באתר</div>');
-    if (location.hash && !render.done) { var t = document.getElementById(location.hash.slice(1)); if (t) setTimeout(function () { t.scrollIntoView(); }, 60); }
     render.done = true;
   }
 
@@ -249,6 +253,14 @@
       prog.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, scrollY / h) : 0) + ')';
     };
     addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#"]');
+      if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey) return;
+      var id = a.getAttribute('href').slice(1), el = id ? document.getElementById(id) : null;
+      if (a.id === 'langBtn') return;
+      e.preventDefault();
+      if (el) el.scrollIntoView({ behavior: STILL ? 'auto' : 'smooth' }); else scrollTo({ top: 0, behavior: STILL ? 'auto' : 'smooth' });
+    });
     var burger = $('#burger'), nav = $('#nav');
     burger.addEventListener('click', function () { var o = nav.classList.toggle('open'); burger.setAttribute('aria-expanded', o); });
     nav.addEventListener('click', function (e) { if (e.target.tagName === 'A') { nav.classList.remove('open'); burger.setAttribute('aria-expanded', false); } });
