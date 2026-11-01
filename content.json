@@ -11,7 +11,6 @@
       "hero2": "assets/img/hero-2.webp",
       "hero3": "assets/img/hero-3.webp",
       "hero4": "assets/img/hero-4.webp",
-      "heroVideo": "assets/img/hero-structure.mp4",
       "accent": "#8fd3ff",
       "logo": "",
       "pubHighlight": "Baranes",
@@ -29,7 +28,8 @@
       "cta2Link": "#projects",
       "footer": "© Baranes Lab · Ariel University",
       "credit": "Website design and construction: Dr. Yael Sade · [yael.sade@gmail.com](mailto:yael.sade@gmail.com)",
-      "seoDescription": "Network Architecture & Information Lab, Prof. Danny Baranes, Ariel University. How neuronal network architecture shapes information, memory, and computation."
+      "seoDescription": "Network Architecture & Information Lab, Prof. Danny Baranes, Ariel University. How neuronal network architecture shapes information, memory, and computation.",
+      "keywords": "Neuronal networks, Network geometry, Information & memory, Computation, The cosmic web, Machine learning, Physical simulations, Neural regeneration, Coral biomaterials, Glioblastoma"
     },
     "sections": [
       {
@@ -41,7 +41,8 @@
         "image": "assets/img/vision.webp",
         "imageAlt": "Illustration of a brain made of light and geometric shapes",
         "bg": "",
-        "body": "We study neural networks from a **structural perspective**, asking how the geometry and spatial organization of a network shape activity, information processing, learning, and memory.\n\nResearch in the lab goes beyond a sole focus on synaptic communication, and examines how ordered structures at the level of the entire network act as organizing principles of neural function.\n\nBy integrating experimental neurobiology, physics, geometry, and computational modeling and simulations, we seek **general laws of functional structural organization** in networks.\n\nWe believe that these structural principles are essential for a deeper and broader understanding of neural networks and brain activity."
+        "body": "We study neural networks from a **structural perspective**, asking how the geometry and spatial organization of a network shape activity, information processing, learning, and memory.\n\nResearch in the lab goes beyond a sole focus on synaptic communication, and examines how ordered structures at the level of the entire network act as organizing principles of neural function.\n\nBy integrating experimental neurobiology, physics, geometry, and computational modeling and simulations, we seek **general laws of functional structural organization** in networks.\n\nWe believe that these structural principles are essential for a deeper and broader understanding of neural networks and brain activity.",
+        "video": "assets/img/hero-structure.mp4"
       },
       {
         "id": "projects",
@@ -418,7 +419,6 @@
       "hero2": "assets/img/hero-2.webp",
       "hero3": "assets/img/hero-3.webp",
       "hero4": "assets/img/hero-4.webp",
-      "heroVideo": "assets/img/hero-structure.mp4",
       "accent": "#8fd3ff",
       "logo": "",
       "pubHighlight": "Baranes",
@@ -436,7 +436,8 @@
       "cta2Link": "#projects",
       "footer": "© המעבדה לארכיטקטורת רשת ומידע · אוניברסיטת אריאל",
       "credit": "עיצוב ובניית האתר: ד\"ר יעל שדה · [yael.sade@gmail.com](mailto:yael.sade@gmail.com)",
-      "seoDescription": "המעבדה לארכיטקטורת רשת ומידע של פרופ׳ דני ברנס, אוניברסיטת אריאל."
+      "seoDescription": "המעבדה לארכיטקטורת רשת ומידע של פרופ׳ דני ברנס, אוניברסיטת אריאל.",
+      "keywords": "רשתות עצביות, גיאומטריה של רשתות, מידע וזיכרון, חישוב, הרשת הקוסמית, למידת מכונה, סימולציות פיזיקליות, התחדשות עצבית, ביו־חומרים מאלמוגים, גליובלסטומה"
     },
     "sections": [
       {
@@ -448,7 +449,8 @@
         "image": "assets/img/vision.webp",
         "imageAlt": "איור של מוח עשוי אור וצורות גיאומטריות",
         "bg": "",
-        "body": "אנו חוקרים רשתות עצביות מתוך **נקודת מבט מבנית**: כיצד הגיאומטריה והארגון המרחבי של הרשת מעצבים פעילות, עיבוד מידע, למידה וזיכרון.\n\nהמחקר במעבדה חורג מההתמקדות בתקשורת סינפטית בלבד, ובוחן כיצד מבנים מסודרים ברמת הרשת כולה פועלים כעקרונות מארגנים של תפקוד עצבי.\n\nבאמצעות שילוב של נוירוביולוגיה ניסויית, פיזיקה, גיאומטריה, מידול וסימולציות חישוביות, אנו מחפשים **חוקים כלליים של ארגון מבני פונקציונלי** של רשתות.\n\nאנו מאמינים שעקרונות אלה חיוניים להבנה עמוקה ורחבה יותר של רשתות עצביות ושל פעילות המוח."
+        "body": "אנו חוקרים רשתות עצביות מתוך **נקודת מבט מבנית**: כיצד הגיאומטריה והארגון המרחבי של הרשת מעצבים פעילות, עיבוד מידע, למידה וזיכרון.\n\nהמחקר במעבדה חורג מההתמקדות בתקשורת סינפטית בלבד, ובוחן כיצד מבנים מסודרים ברמת הרשת כולה פועלים כעקרונות מארגנים של תפקוד עצבי.\n\nבאמצעות שילוב של נוירוביולוגיה ניסויית, פיזיקה, גיאומטריה, מידול וסימולציות חישוביות, אנו מחפשים **חוקים כלליים של ארגון מבני פונקציונלי** של רשתות.\n\nאנו מאמינים שעקרונות אלה חיוניים להבנה עמוקה ורחבה יותר של רשתות עצביות ושל פעילות המוח.",
+        "video": "assets/img/hero-structure.mp4"
       },
       {
         "id": "projects",
