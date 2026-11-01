@@ -144,15 +144,6 @@
             "link": ""
           },
           {
-            "name": "Shreyasi Mitra",
-            "role": "PhD student",
-            "group": "",
-            "bio": "A PhD student investigating the effects of calcite on viability, motility, and proliferation of glioblastoma cells compared to normal astrocytes.",
-            "image": "assets/img/team-mitra.webp",
-            "email": "",
-            "link": ""
-          },
-          {
             "name": "Yehonatan Greiner",
             "role": "MSc student",
             "group": "",
@@ -160,31 +151,33 @@
             "image": "assets/img/team-greiner.webp",
             "email": "",
             "link": ""
+          }
+        ]
+      },
+      {
+        "id": "alumni",
+        "type": "people",
+        "title": "Alumni",
+        "nav": true,
+        "visible": true,
+        "intro": "",
+        "bg": "",
+        "items": [
+          {
+            "name": "Shreyasi Mitra",
+            "role": "Former PhD student",
+            "group": "",
+            "bio": "Investigated the effects of calcite on viability, motility, and proliferation of glioblastoma cells compared to normal astrocytes.",
+            "image": "assets/img/team-mitra.webp",
+            "email": "",
+            "link": ""
           },
           {
             "name": "Olcay Akgün",
-            "role": "MSc student · TUM (Munich)",
+            "role": "Former MSc student · TUM (Munich)",
             "group": "",
-            "bio": "An MSc student at TUM (Munich) under joint supervision, studying graphical representations and geometric analysis of cultured neuronal networks.",
+            "bio": "MSc student at TUM (Munich) under joint supervision; studied graphical representations and geometric analysis of cultured neuronal networks.",
             "image": "assets/img/team-akgun.webp",
-            "email": "",
-            "link": ""
-          },
-          {
-            "name": "Gilad Lavi",
-            "role": "Project student",
-            "group": "",
-            "bio": "Project student conducting his research project, applying AI to investigate geometric structures in cultured neuronal networks.",
-            "image": "assets/img/team-lavi.webp",
-            "email": "",
-            "link": ""
-          },
-          {
-            "name": "Hila Goldman",
-            "role": "Project student",
-            "group": "",
-            "bio": "Project student exploring philosophical perspectives on whether the laws of nature are shaped by human perception.",
-            "image": "assets/img/team-goldman.webp",
             "email": "",
             "link": ""
           }
@@ -545,19 +538,10 @@
           },
           {
             "name": "וולפגנג קורץ",
-            "role": "דוקטורנט · TUM (מינכן)",
+            "role": "דוקטורנט (TUM, מינכן)",
             "group": "",
             "bio": "דוקטורנט ב-TUM (מינכן) בהנחיה משותפת, חוקר ייצוגים גיאומטריים של רשתות עצביות מתורבתות ומפתח מודלים של סימולציה סטוכסטית.",
             "image": "assets/img/team-kurz.webp",
-            "email": "",
-            "link": ""
-          },
-          {
-            "name": "שרייאסי מיטרה",
-            "role": "דוקטורנטית",
-            "group": "",
-            "bio": "חוקרת את ההשפעות של קלציט על חיות, תנועתיות והתפשטות תאי גליובלסטומה בהשוואה לאסטרוציטים רגילים.",
-            "image": "assets/img/team-mitra.webp",
             "email": "",
             "link": ""
           },
@@ -569,31 +553,33 @@
             "image": "assets/img/team-greiner.webp",
             "email": "",
             "link": ""
+          }
+        ]
+      },
+      {
+        "id": "alumni",
+        "type": "people",
+        "title": "בוגרי המעבדה",
+        "nav": true,
+        "visible": true,
+        "intro": "",
+        "bg": "",
+        "items": [
+          {
+            "name": "שרייאסי מיטרה",
+            "role": "דוקטורנטית לשעבר",
+            "group": "",
+            "bio": "חקרה את ההשפעות של קלציט על חיות, תנועתיות והתפשטות תאי גליובלסטומה בהשוואה לאסטרוציטים רגילים.",
+            "image": "assets/img/team-mitra.webp",
+            "email": "",
+            "link": ""
           },
           {
             "name": "אולצ'אי אקגון",
-            "role": "סטודנט לתואר שני · TUM (מינכן)",
+            "role": "סטודנט לתואר שני לשעבר (TUM, מינכן)",
             "group": "",
-            "bio": "סטודנט לתואר שני ב-TUM (מינכן) בהנחיה משותפת, לומד ייצוגים גרפיים וניתוח גיאומטרי של רשתות נוירונים מתורבתות.",
+            "bio": "סטודנט לתואר שני ב-TUM (מינכן) בהנחיה משותפת; למד ייצוגים גרפיים וניתוח גיאומטרי של רשתות נוירונים מתורבתות.",
             "image": "assets/img/team-akgun.webp",
-            "email": "",
-            "link": ""
-          },
-          {
-            "name": "גלעד לביא",
-            "role": "סטודנט לתואר ראשון",
-            "group": "",
-            "bio": "סטודנט לתואר ראשון במדעי המוח. המחקר שלו כולל יישום בינה מלאכותית לחקר מבנים גיאומטריים ברשתות נוירונים בתרבית.",
-            "image": "assets/img/team-lavi.webp",
-            "email": "",
-            "link": ""
-          },
-          {
-            "name": "הילה גולדמן",
-            "role": "סטודנטית לתואר ראשון",
-            "group": "",
-            "bio": "סטודנטית לתואר ראשון במדעי המוח. חוקרת פרספקטיבות פילוסופיות סביב השאלה האם חוקי הטבע מעוצבים על ידי התפיסה האנושית.",
-            "image": "assets/img/team-goldman.webp",
             "email": "",
             "link": ""
           }
