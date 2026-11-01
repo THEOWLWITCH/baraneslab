@@ -165,18 +165,18 @@
         "items": [
           {
             "name": "Shreyasi Mitra",
-            "role": "Former PhD student",
+            "role": "PhD student",
             "group": "",
-            "bio": "Investigated the effects of calcite on viability, motility, and proliferation of glioblastoma cells compared to normal astrocytes.",
+            "bio": "A PhD student investigating the effects of calcite on viability, motility, and proliferation of glioblastoma cells compared to normal astrocytes.",
             "image": "assets/img/team-mitra.webp",
             "email": "",
             "link": ""
           },
           {
             "name": "Olcay Akgün",
-            "role": "Former MSc student · TUM (Munich)",
+            "role": "MSc student · TUM (Munich)",
             "group": "",
-            "bio": "MSc student at TUM (Munich) under joint supervision; studied graphical representations and geometric analysis of cultured neuronal networks.",
+            "bio": "An MSc student at TUM (Munich) under joint supervision, studying graphical representations and geometric analysis of cultured neuronal networks.",
             "image": "assets/img/team-akgun.webp",
             "email": "",
             "link": ""
@@ -567,18 +567,18 @@
         "items": [
           {
             "name": "שרייאסי מיטרה",
-            "role": "דוקטורנטית לשעבר",
+            "role": "דוקטורנטית",
             "group": "",
-            "bio": "חקרה את ההשפעות של קלציט על חיות, תנועתיות והתפשטות תאי גליובלסטומה בהשוואה לאסטרוציטים רגילים.",
+            "bio": "חוקרת את ההשפעות של קלציט על חיות, תנועתיות והתפשטות תאי גליובלסטומה בהשוואה לאסטרוציטים רגילים.",
             "image": "assets/img/team-mitra.webp",
             "email": "",
             "link": ""
           },
           {
             "name": "אולצ'אי אקגון",
-            "role": "סטודנט לתואר שני לשעבר (TUM, מינכן)",
+            "role": "סטודנט לתואר שני (TUM, מינכן)",
             "group": "",
-            "bio": "סטודנט לתואר שני ב-TUM (מינכן) בהנחיה משותפת; למד ייצוגים גרפיים וניתוח גיאומטרי של רשתות נוירונים מתורבתות.",
+            "bio": "סטודנט לתואר שני ב-TUM (מינכן) בהנחיה משותפת, לומד ייצוגים גרפיים וניתוח גיאומטרי של רשתות נוירונים מתורבתות.",
             "image": "assets/img/team-akgun.webp",
             "email": "",
             "link": ""
