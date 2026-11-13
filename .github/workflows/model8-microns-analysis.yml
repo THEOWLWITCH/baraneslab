@@ -1,0 +1,37 @@
+name: Model8 MICrONS analysis
+
+on:
+  push:
+    branches:
+      - model8-microns-analysis
+    paths:
+      - 'analysis/**'
+      - '.github/workflows/model8-microns-analysis.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy pandas scipy scikit-learn requests h5py pyarrow meshparty
+      - name: Run diagnostic if present
+        run: |
+          python analysis/model8_microns_diagnostic.py
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: model8-microns-results
+          path: model8_microns_results/
+          if-no-files-found: warn
