@@ -64,7 +64,7 @@ def load_functional():
     rloc_url = f"{DT_BASE}/readout/readout_locations.npy"
     runits = pd.read_csv(io.BytesIO(download_bytes(f"{DT_BASE}/readout/units.csv")))
 
-    loc_path = OUT / "readout_locations.npy"
+    loc_path = Path("/tmp/readout_locations.npy")
     if not loc_path.exists():
         download_file(rloc_url, loc_path)
     locations = np.load(loc_path, mmap_mode="r")
@@ -109,7 +109,7 @@ def load_functional():
     return f, runits
 
 def get_readout_weights():
-    p = OUT / "readout_weights.npy"
+    p = Path("/tmp/readout_weights.npy")
     if not p.exists():
         print("Downloading 512-D digital-twin readout weights...")
         download_file(f"{DT_BASE}/readout/readout_weights.npy", p, timeout=1800)
@@ -387,7 +387,7 @@ def main():
             attempts+=1
             root=int(r.pt_root_id); nuc=int(r.nucleus_id)
             t0=time.time()
-            conn,why=analyze_mesh(root,nuc,func_by_root,weights,td)
+            conn,why=analyze_mesh(root,nuc,func_by_root,td)
             rec={"post_pt_root_id":root,"nucleus_id":nuc,"dendrite_proofread":bool(r.dendrite_proofread),
                  "cc_norm":float(r.cc_norm),"status":why,"seconds":time.time()-t0,
                  "n_functional_pre":0,"n_branches":0}
