@@ -158,7 +158,7 @@ def analyze_mesh(root_id, nucleus_id, func_by_root, tmpdir):
         df = ann.df.copy().reset_index(drop=True)
         if "pre_pt_root_id" not in df.columns or len(df)==0:
             return None, "no_pre_ids"
-        skidx = np.asarray(ann.skel_index).astype(int).reshape(-1)
+        skidx = np.asarray(ann.mesh_index.to_skel_index_padded).astype(int).reshape(-1)
         if len(skidx) != len(df):
             return None, "skidx_mismatch"
 
