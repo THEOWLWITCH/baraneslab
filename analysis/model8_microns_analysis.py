@@ -368,6 +368,8 @@ def main():
     fgood=f[(f["cc_norm"].notna()) & (f["cc_norm"]>=CC_MIN)].copy()
     fgood=fgood[fgood["readout_row"].between(0,weights.shape[0]-1)]
     func_by_root={int(r.pt_root_id):r.to_dict() for _,r in fgood.iterrows()}
+    save_cols=[x for x in ["pt_root_id","readout_row","cc_abs","cc_max","cc_norm","OSI","DSI","gOSI","gDSI","pref_ori","pref_dir","readout_loc_x","readout_loc_y","dendrite_proofread","status_dendrite","nucleus_id"] if x in fgood.columns]
+    fgood[save_cols].to_csv(OUT/"functional_map.csv",index=False)
 
     print(f"Manual coreg roots with cc_norm >= {CC_MIN}: {len(func_by_root)}")
     print(f"Proofread dendrites among them: {int(fgood.dendrite_proofread.sum())}")
