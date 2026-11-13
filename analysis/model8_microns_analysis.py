@@ -18,7 +18,7 @@ RNG=np.random.default_rng(20261113)
 MAX_ANALYZED_POSTS=80
 MIN_PRE=3
 N_PERM=2000
-N_SHUFFLE=100
+N_SHUFFLE=20
 
 def get(url,path,timeout=600):
     p=Path(path)
@@ -239,46 +239,63 @@ pairs.to_csv(OUT/"q1_pair_table.csv",index=False)
 
 q1_summary=[]
 q1_cell_effects=[]
+
+# Precompute the similarity matrices once. Permutations then only reassign
+# functional identities to fixed branch positions.
+metric_cache={}
+for post,gc in conn.groupby("post_nucleus_id"):
+    gc=gc.reset_index(drop=True)
+    ids=gc.pre_nucleus_id.astype(int).tolist()
+    same=np.equal.outer(gc.dominant_branch.to_numpy(),gc.dominant_branch.to_numpy())
+    np.fill_diagonal(same,False)
+    upper=np.triu(np.ones((len(gc),len(gc)),dtype=bool),1)
+    sims={}
+    for metric in metrics:
+        S=np.full((len(gc),len(gc)),np.nan,float)
+        for i in range(len(gc)):
+            ni=node.loc[ids[i]]
+            for j in range(i+1,len(gc)):
+                nj=node.loc[ids[j]]
+                if metric=="readout_similarity":
+                    v=cosine(ni.readout_cvt,nj.readout_cvt)
+                elif metric=="in_silico_response_similarity":
+                    v=corr(ni.in_silico_resp,nj.in_silico_resp)
+                elif metric=="orientation_similarity":
+                    v=circ_ori_sim(ni.pref_ori_cvt_monet_full,nj.pref_ori_cvt_monet_full)
+                else:
+                    same_scan=(pd.notna(ni.scan_session) and pd.notna(nj.scan_session) and
+                               float(ni.scan_session)==float(nj.scan_session) and
+                               float(ni.scan_idx)==float(nj.scan_idx))
+                    v=corr(ni.in_vivo_mean_resp,nj.in_vivo_mean_resp) if same_scan else np.nan
+                S[i,j]=S[j,i]=v
+        sims[metric]=S
+    metric_cache[int(post)]={"same":same,"upper":upper,"sims":sims}
+
 for metric in metrics:
     cell_eff=[]
-    for post,g in pairs.groupby("post_nucleus_id"):
-        s=g.loc[g.same_dominant_branch,metric].dropna()
-        d=g.loc[~g.same_dominant_branch,metric].dropna()
-        if len(s)>0 and len(d)>0:
-            delta=float(s.mean()-d.mean()); cell_eff.append(delta)
-            q1_cell_effects.append({"metric":metric,"post_nucleus_id":int(post),
-                                    "same_mean":float(s.mean()),"different_mean":float(d.mean()),
-                                    "delta":delta,"n_same_pairs":len(s),"n_diff_pairs":len(d)})
+    for post,cache in metric_cache.items():
+        S=cache["sims"][metric]; same=cache["same"]; upper=cache["upper"]
+        sv=S[upper & same & np.isfinite(S)]
+        dv=S[upper & (~same) & np.isfinite(S)]
+        if len(sv)>0 and len(dv)>0:
+            delta=float(np.mean(sv)-np.mean(dv)); cell_eff.append(delta)
+            q1_cell_effects.append({"metric":metric,"post_nucleus_id":post,
+                                    "same_mean":float(np.mean(sv)),"different_mean":float(np.mean(dv)),
+                                    "delta":delta,"n_same_pairs":len(sv),"n_diff_pairs":len(dv)})
     obs,lo,hi=mean_ci(cell_eff)
-    # geometry-preserving within-cell label permutation
     null=[]
-    usable_posts=[p for p,g in conn.groupby("post_nucleus_id") if len(g)>=3]
     for rep in range(N_PERM):
         rep_eff=[]
-        for post,gc in conn.groupby("post_nucleus_id"):
-            gc=gc.reset_index(drop=True)
-            if len(gc)<3: continue
-            # precompute original functional values and permute identities
-            perm=RNG.permutation(len(gc))
-            vals=[]
-            for ii in range(len(gc)):
-                ni=node.loc[int(gc.iloc[perm[ii]].pre_nucleus_id)]
-                vals.append(ni)
-            ss=[]; dd=[]
-            for i in range(len(gc)):
-                for j in range(i+1,len(gc)):
-                    ni=vals[i]; nj=vals[j]
-                    if metric=="readout_similarity": v=cosine(ni.readout_cvt,nj.readout_cvt)
-                    elif metric=="in_silico_response_similarity": v=corr(ni.in_silico_resp,nj.in_silico_resp)
-                    elif metric=="orientation_similarity": v=circ_ori_sim(ni.pref_ori_cvt_monet_full,nj.pref_ori_cvt_monet_full)
-                    else:
-                        same_scan=(pd.notna(ni.scan_session) and pd.notna(nj.scan_session) and
-                                   float(ni.scan_session)==float(nj.scan_session) and float(ni.scan_idx)==float(nj.scan_idx))
-                        v=corr(ni.in_vivo_mean_resp,nj.in_vivo_mean_resp) if same_scan else np.nan
-                    if not np.isfinite(v): continue
-                    same=int(gc.iloc[i].dominant_branch)==int(gc.iloc[j].dominant_branch)
-                    (ss if same else dd).append(v)
-            if ss and dd: rep_eff.append(float(np.mean(ss)-np.mean(dd)))
+        for post,cache in metric_cache.items():
+            S=cache["sims"][metric]; same=cache["same"]; upper=cache["upper"]
+            n=S.shape[0]
+            if n<3: continue
+            p=RNG.permutation(n)
+            Sp=S[np.ix_(p,p)]
+            sv=Sp[upper & same & np.isfinite(Sp)]
+            dv=Sp[upper & (~same) & np.isfinite(Sp)]
+            if len(sv)>0 and len(dv)>0:
+                rep_eff.append(float(np.mean(sv)-np.mean(dv)))
         null.append(float(np.mean(rep_eff)) if rep_eff else np.nan)
     q1_summary.append({"metric":metric,"n_posts":len(cell_eff),"mean_delta":obs,
                        "bootstrap_ci_low":lo,"bootstrap_ci_high":hi,
