@@ -149,7 +149,10 @@ for cr in cand.itertuples(index=False):
             ax=set(np.asarray(mw.anno.is_axon.skel_index).astype(int).reshape(-1).tolist())
             sdf=sdf[~sdf["skel_index"].isin(ax)].copy()
         sdf["pre_nucleus_id"]=sdf["pre_pt_root_id"].map(lambda x: root_to_nid.get(int(x)) if pd.notna(x) else None)
-        target_pre=set(connected.loc[connected.post_nucleus_id==post_nid,"pre_nucleus_id"].astype(int))
+        # Use every functionally characterized presynaptic neuron available in
+        # the public node table, not only the 148 axons used in Ding et al.'s
+        # connectivity-control sample.
+        target_pre=set(map(int,node.index))
         sdf=sdf[sdf["pre_nucleus_id"].isin(target_pre)].copy()
         if len(sdf)==0: continue
         # exact branch allocation by pre partner
