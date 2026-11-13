@@ -5,7 +5,7 @@ import pandas as pd, numpy as np
 OUT=Path("model8_microns_results"); OUT.mkdir(exist_ok=True)
 BASE="https://s3.amazonaws.com/bossdb-open-data/iarpa_microns/minnie/functional_data/functional_connectomics/node_and_edge_properties/v1"
 STATIC="https://storage.googleapis.com/mat_dbs/public/minnie65_phase3_v1/v661"
-MESH="https://bossdb-open-data.s3.amazonaws.com/iarpa_microns/minnie/minnie/minnie65/skeletons/v661/meshworks"
+MESH="https://bossdb-open-data.s3.amazonaws.com/iarpa_microns/minnie/minnie65/skeletons/v661/meshworks"
 
 def get(url,path):
     p=Path(path)
