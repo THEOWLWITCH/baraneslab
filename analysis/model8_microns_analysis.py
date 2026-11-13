@@ -139,10 +139,10 @@ for cr in cand.itertuples(index=False):
         if len(sdf)!=len(skidx):
             raise RuntimeError(f"post_syn/skel index length mismatch {len(sdf)} {len(skidx)}")
         segmap=np.asarray(mw.skeleton.segment_map).astype(int)
-        branch=segmap[skidx]
         rootseg=int(segmap[int(mw.skeleton.root)])
-        sdf["branch_id"]=branch\n        sdf=sdf[sdf["skel_index"]>=0].copy()
         sdf["skel_index"]=skidx
+        sdf=sdf[sdf["skel_index"]>=0].copy()
+        sdf["branch_id"]=segmap[sdf["skel_index"].astype(int).to_numpy()]
         sdf=sdf[sdf["branch_id"]!=rootseg].copy()
         # Exclude axonal skeleton vertices if annotation is present.
         if hasattr(mw.anno,"is_axon"):
