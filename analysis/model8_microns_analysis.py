@@ -135,13 +135,13 @@ for cr in cand.itertuples(index=False):
         mw=meshwork.load_meshwork(local)
         if not hasattr(mw.anno,"post_syn"): continue
         sdf=mw.anno.post_syn.df.copy().reset_index(drop=True)
-        skidx=np.asarray(mw.anno.post_syn.skel_index).astype(int).reshape(-1)
+        skidx=np.asarray(mw.anno.post_syn.mesh_index.to_skel_index_padded).astype(int).reshape(-1)
         if len(sdf)!=len(skidx):
             raise RuntimeError(f"post_syn/skel index length mismatch {len(sdf)} {len(skidx)}")
         segmap=np.asarray(mw.skeleton.segment_map).astype(int)
         branch=segmap[skidx]
         rootseg=int(segmap[int(mw.skeleton.root)])
-        sdf["branch_id"]=branch
+        sdf["branch_id"]=branch\n        sdf=sdf[sdf["skel_index"]>=0].copy()
         sdf["skel_index"]=skidx
         sdf=sdf[sdf["branch_id"]!=rootseg].copy()
         # Exclude axonal skeleton vertices if annotation is present.
